@@ -192,9 +192,43 @@ function filter($haystack, $arg_filters, &$err)
     return $arr_ret;
 }
 
+//用于输出 JSON
+function display_json($arr_data)
+{
+    if (!isset($arr_data['result']))
+    {   //no error
+        $arr_data['result'] = 0; 
+        $arr_data['err']    = 'ok';
+    }
+
+    $arr_data['result'] = intval($arr_data['result']);
+
+    if ($arr_data['result'] > 0 && !isset($arr_data['err']))
+    {
+        $arr_data['err'] = '未知错误';
+    }
+
+    ob_clean();
+
+    header("Content-Type: application/json; charset=utf-8");
+    echo json_encode($arr_data);
+
+    exit();
+}
+
 //用于显示通用的信息页面(出错或者其他)
 function display_msg($msg, $title = "出错啦!")
 {
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+        strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+    {
+        display_json(array(
+            'result'    => 1000,
+            'err'       => $msg,
+        ));
+        exit();
+    }
+
     echo <<<eot
 <center>
 <div style="margin:20px; width:500px;">
