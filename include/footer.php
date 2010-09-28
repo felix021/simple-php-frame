@@ -9,7 +9,7 @@ for (var i = 0; i < trs.length; i++) {
         this.className += " mouseover";
     }
     tr.onmouseout = function () {
-        this.className = this.className.replace(" mouseover", "");
+        this.className = this.className.replace(/ mouseover/g, "");
     }
 }
 </script> 
