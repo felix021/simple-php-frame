@@ -6,11 +6,10 @@ var trs = document.getElementsByTagName("tr");
 for (var i = 0; i < trs.length; i++) {
     var tr = trs[i];
     tr.onmouseover = function () {
-        this.color = this.style.background;
-        this.style.background = "#bedcfa";
+        this.className += " mouseover";
     }
     tr.onmouseout = function () {
-        this.style.background = this.color;
+        this.className = this.className.replace(" mouseover", "");
     }
 }
 </script> 
