@@ -42,7 +42,7 @@ class sqlite {
 
         $errno = 0;
         $this->result = $this->db->query($query);
-        if ($this->db->errorCode() > 0) {
+        if ($this->result === false) {
             $this->errno = 3;
             $this->error = print_r($this->db->errorInfo(), true);
             return false;
@@ -60,9 +60,8 @@ class sqlite {
 
         $errno = 0;
 
-        //$stmt = $this->db->prepare($query);
         $this->affected_rows = $this->db->exec($query);
-        if ($this->db->errorCode() > 0) {
+        if ($this->affected_rows === false) {
             $this->errno = 3;
             $this->error = print_r($this->db->errorInfo(), true);
             return false;
