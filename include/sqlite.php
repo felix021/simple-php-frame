@@ -13,11 +13,15 @@ class sqlite {
 
     public function __construct($filepath) {
         $this->db_config = func_get_args();
-        $this->db = new PDO('sqlite:' . $filepath);
-        $this->errno = 0;
-        if ($this->db->errorCode() > 0) {
+        try
+        {
+            $this->db = new PDO('sqlite:' . $filepath);
+            $this->errno = 0;
+        }
+        catch(PDOException $e)
+        {
             $this->errno = 1;
-            $this->error = print_r($this->db->errorInfo(), true);
+            $this->error = $e->getMessage();
             $this->db = null;
         }
     }
@@ -42,9 +46,10 @@ class sqlite {
 
         $errno = 0;
         $this->result = $this->db->query($query);
-        if ($this->result === false) {
+        if ($this->db->errorCode() !== "00000") {
             $this->errno = 3;
-            $this->error = print_r($this->db->errorInfo(), true);
+            $info = $this->db->errorInfo();
+            $this->error = sprintf("SQLSTATE[%s][%s]%s", $info[0], $info[1], $info[2]);
             return false;
         }
 
@@ -61,9 +66,10 @@ class sqlite {
         $errno = 0;
 
         $this->affected_rows = $this->db->exec($query);
-        if ($this->affected_rows === false) {
+        if ($this->db->errorCode() !== "00000") {
             $this->errno = 3;
-            $this->error = print_r($this->db->errorInfo(), true);
+            $info = $this->db->errorInfo();
+            $this->error = sprintf("SQLSTATE[%s] [%s] %s", $info[0], $info[1], $info[2]);
             return false;
         }
 
