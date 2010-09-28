@@ -1,0 +1,18 @@
+NOTICE [2010-09-28 20:31:14] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:14] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:GET] [action:test] [logid:254218641] [ip:10.0.2.2] log_close
+NOTICE [2010-09-28 20:31:16] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:16] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:GET] [action:test] [logid:446279538] [ip:10.0.2.2] log_close
+NOTICE [2010-09-28 20:31:17] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:17] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:GET] [action:test] [logid:621620997] [ip:10.0.2.2] log_close
+NOTICE [2010-09-28 20:31:20] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:20] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:GET] [action:index] [logid:1532247721] [ip:10.0.2.2] log_close
+NOTICE [2010-09-28 20:31:23] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:23] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:GET] [action:login] [logid:161664371] [ip:10.0.2.2] log_close
+NOTICE [2010-09-28 20:31:25] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:25] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:POST] [action:do_login] [logid:339328671] [ip:10.0.2.2] log_close
+NOTICE [2010-09-28 20:31:30] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:30] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:GET] [action:index] [logid:1686115373] [ip:10.0.2.2] log_close
+NOTICE [2010-09-28 20:31:31] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:31] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:GET] [action:logout] [logid:868556749] [ip:10.0.2.2] log_close
+NOTICE [2010-09-28 20:31:33] [/home/felix021/svn/simple-php-frame/include/logger.php:68] log_open
+TRACE [2010-09-28 20:31:33] [/home/felix021/svn/simple-php-frame/include/logger.php:76] [method:GET] [action:index] [logid:2072753890] [ip:10.0.2.2] log_close

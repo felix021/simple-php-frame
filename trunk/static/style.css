@@ -1,0 +1,277 @@
+/*----- Begin Initial -----*/
+* {
+	margin:0;padding:0;
+}
+h1 {
+	font-size:16px;
+	color:#5079e9;
+	text-align:left;
+}
+h2 {
+	font-size:14px;
+}
+h3 {
+	font-size:10px;
+}
+h4 {
+	font-size:9px;
+}
+ul,ol,li {
+	list-style:none;
+}
+img {
+	border:none;
+}
+code {
+	font-family:"Georgia",arial;
+}
+body {
+	font:normal 0.8em "Microsoft Yahei", Arial, Helvetica, sans-serif;
+	background-color:#fff;
+	margin:0px;
+	padding:0px;
+}
+a:link {
+	text-decoration:none;
+	border:none;
+	color:#505050;
+}
+a:hover {
+	text-decoration:none;
+	border:none;
+	color:#8a8a8a;
+}
+a:active {
+	text-decoration:none;
+	border:none;
+	color:#505050;
+}
+a:visited {
+	text-decoration:none;
+	border:none;
+	color:#505050;
+}
+
+.float-left {
+	float:left;
+}
+.float-right {
+	float:right;
+}
+
+.clear-both {
+	clear:both;
+}
+.clear-left {
+	clear:left;
+}
+.small-font {
+	color:#909090;
+	font-size:8px;
+}
+:focus {
+	1outline:none;
+}
+a {
+	1blr:expression(this.onFocus=this.close());
+} /* IE */ 
+a {
+	1blr:expression(this.onFocus=this.blur());
+} /* IE*/ 
+a:focus,input:focus {
+	1-moz-outline-style: none;
+} /* FF */ 
+/*----- End Initial ------*/
+
+/*----- Begin Layout -----*/
+#head-Pan {
+	width:1024px;
+	height:65px;
+	clear:both;
+	margin:0 auto;
+	1display:relative;
+	overflow:hidden;
+}
+
+#fun-Pan {
+	display:relative;
+	overflow:hidden;
+	width:1024px;
+	height:40px;
+	margin:0 auto;
+}
+
+#body-Pan {
+	width:1024px;
+	1height:100%;
+	margin:0 auto;
+	1position:relative;
+	1overflow:hidden;
+	padding:10px;
+}
+
+#foot-Pan {
+	padding-top:20px;
+	width:1024px;
+	clear:both;
+	margin:0 auto;
+	text-align:center;
+	color:#999999;
+}
+
+/*----- End Layout -----*/
+
+#head-Pan {
+	background:url(./images/head_bg.gif) bottom left repeat-x;
+}
+
+#logo {
+	float:left;
+}
+
+#head-Right {
+	color:#5079e9;
+	margin-top:36px;
+	float:right;
+}
+#head-Right ul li {
+	float:left;
+	width:100px;
+}
+
+#fun-1 ul li {
+	float:left;
+	margin-top:9px;
+	line-height:24px;
+	text-align:center;
+	height:22px;
+	width:81px;
+	margin-left:8px;
+	color:#ffffff;
+	background:url(./images/fun-1-bg.png) top left no-repeat;
+}
+#fun-1 ul li a {
+	color:#ffffff;
+}
+.fun-1-focus {
+	color:#18b32a!important;
+	background:url(./images/fun-1-bg-focus.png) top left no-repeat!important;
+}
+.fun-1-focus a {
+	color:#18b32a!important;
+}
+#fun-2 {
+	1display:relative;
+	1overflow:hidden;
+	width:380px;
+	height:40px;
+	float:right;
+	background:url(./images/fun-2-bg.png) top left no-repeat;
+}
+#fun-2 ul {
+	1padding-top:8px;
+	1margin-left:95px;
+}
+.fun-2-input {
+	margin-left:28px;
+	margin-top:2px;
+	text-align:center;
+	border:1px solid #ffffff;
+}
+.fun-2-button {
+	height:40px!important;
+	width:52px;
+	background:url(./images/fun-2-button.png) center left no-repeat;
+}
+#fun-2 ul li {
+	float:left;
+	height:40px;
+	line-height:40px;
+}
+
+.main-table {
+	line-height:24px;
+	margin:0 auto;
+	width:100%;
+	text-align:center;
+	font-size:12px;
+	color:#666666;
+	1border-spacing: 2px 2px;
+	border-collapse: collapse;
+}
+.main-table tr {
+	height:54px;
+	1background-color:#eeeeee;
+	1width:1000px;
+}
+.main-table tr td {
+	padding:3px;
+	border:1px solid #eeeeee;
+}
+.main-table tr th {
+	padding:3px;
+	border:1px solid #eeeeee;
+	color:#18b32a;
+	line-height:20px!important;
+}
+th {
+	background: #fff !important;
+}
+.forcebg {
+	background: #fff !important;
+}
+.tdw-12 {
+	width:12%!important;
+}
+.tdw-4 {
+	width:4%!important;
+}
+#apply-table {
+	font-size:14px;
+	margin:0 auto;
+  border-collapse:separate;
+}
+#apply-table tr td {
+	padding:5px;
+	1border:1px solid #eeeeee;
+}
+.left-text {
+	color:#999999;
+	text-align:right;
+	vertical-align:top;
+}
+.right-text {
+	text-align:left;
+}
+/*------------ login ------------*/
+#body-main {
+	width:500px;
+	height:400px;
+	margin:0 auto;
+	margin-top:240px;
+}
+#logo-Pan {
+	width:210px;
+	height:200px;
+	float:left;
+	
+}
+#login-Pan {
+	border-left:2px solid #cccccc;
+	float:left;
+	padding-left:16px;
+	line-height:40px;
+}
+#login-Pan p {
+	font-size:1.2em;
+	color:#555555;
+	margin-top:6px;
+}
+.login-button {
+	padding:3px;
+	width:60px;
+	margin-right:50px;
+}
+.hint-info p {
+	color:#ed770e!important;
+}
