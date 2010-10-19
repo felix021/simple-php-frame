@@ -46,6 +46,7 @@ final class config
         else {
             self::$action = $_REQUEST['action'];
         }
+        self::$action = basename($action); //防止载入其他目录下的文件
 
         self::$method           = $_SERVER['REQUEST_METHOD'];
 
